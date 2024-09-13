@@ -1,0 +1,4 @@
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+      <Source><![CDATA[    ${source}]]></Source>
+    <Properties><Property><Name>IsDefault</Name><Value>False</Value></Property></Properties>
+  </Part>

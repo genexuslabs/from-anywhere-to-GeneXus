@@ -36,13 +36,20 @@ Once the virtual environment is activated, install the required packages using `
 
 ```bash
 pip install -r requirements.txt
+
+### 4. Create a .env file
+```
+BASE_URL=https://api.qa.saia.ai/chat
+ASSISTANT_NAME=ProcedureBaseSyntax
+REVISION=18
+SAIA_PROJECT_APITOKEN=<YOUR-GXEAI-ASSISTANT-TOKEN>
 ```
 
-### 4. Creating a spec file from a program of your choice
+### 5. Creating a spec file from a program of your choice
 
 #todo
 
-### 4. Creating a GeneXus procedure in xpz file from a spec 
+### 6. Creating a GeneXus procedure in xpz file from a spec 
 After setting up the environment, you can run `script1.py` by providing a file path as an argument. Use the following command:
 
 ```bash

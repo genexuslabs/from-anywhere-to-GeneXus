@@ -1,0 +1,4 @@
+<Variable Name="${name}">
+      <Documentation />
+      ${properties}
+</Variable>
