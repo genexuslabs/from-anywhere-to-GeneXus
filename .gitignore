@@ -74,3 +74,6 @@ output.xml
 
 # Ignore config files with secrets
 config/config.yaml
+
+#tests outputs
+outputs

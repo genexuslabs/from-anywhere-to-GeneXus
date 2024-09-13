@@ -1,4 +1,4 @@
-- name: Double number
+- name: DoubleNumber
   spec: | 
          create a procedure that receives a number and doubles it
 

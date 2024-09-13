@@ -47,11 +47,23 @@ SAIA_PROJECT_APITOKEN=<YOUR-GXEAI-ASSISTANT-TOKEN>
 
 ### 5. Creating a spec file from a program of your choice
 
-#todo
+```bash
+
+python anything_to_spec.py --programs_directory ./tests/cobol/test1/ --spec_path ./outputs/spec1.yml
+```
 
 ### 6. Creating a GeneXus procedure in xpz file from a spec 
 After setting up the environment, you can run `script1.py` by providing a file path as an argument. Use the following command:
 
+```bash
+
+python spec_to_xpz.py --spec_path ./outputs/spec1.yml --xml_path ./outputs/xpz1.xml
+```
+You can import the xpz1.xml file directly into GeneXus.
+
+or
+
+```
 ```bash
 python spec_to_xpz.py --spec_path ./tests/testSet1.yaml --xml_path ./testSet1.xml
 ```

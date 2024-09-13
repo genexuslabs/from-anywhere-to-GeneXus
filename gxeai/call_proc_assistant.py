@@ -11,8 +11,7 @@ def  call_proc_assistant(name, spec):
 
     BASE_URL = os.getenv('BASE_URL')
     SAIA_PROJECT_APITOKEN = os.getenv('SAIA_PROJECT_APITOKEN')
-    ASSISTANT_NAME = os.getenv('ASSISTANT_NAME')
-    REVISION = os.getenv('REVISION')
+    ASSISTANT_NAME = os.getenv('PROC_ASSISTANT_NAME')
 
     # Define the headers
     headers = {
@@ -24,7 +23,6 @@ def  call_proc_assistant(name, spec):
 
     # Define the payload
     payload = {
-        "revision": REVISION,
         "model": f"saia:assistant:{ASSISTANT_NAME}",
         "messages": [
             {
@@ -41,11 +39,8 @@ def  call_proc_assistant(name, spec):
     # Save the content to response.txt
     json_data = json.loads(response.text)
     answer = json_data['choices'][0]['message']['content']
-    print(answer)
-    content = gxeai.clean_proc.parse_procedure(answer )
+    content = gxeai.clean_proc.parse_procedure(answer, name)
     content['description'] = spec
-    if name:
-        content['name'] = name
     return content
 
 

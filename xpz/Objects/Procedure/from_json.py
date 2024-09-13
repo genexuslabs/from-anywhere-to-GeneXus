@@ -2,6 +2,8 @@ import json
 import os
 import xml.etree.ElementTree as ET
 from string import Template
+import xml.sax.saxutils as saxutils
+import yaml
 
 def load_file(file_path):
     """Utility function to load content from a file."""
@@ -20,8 +22,8 @@ def json_to_xml_properties(json_obj):
     for varname, dict in json_obj.items():
         var_element = ET.SubElement(properties, "Variables")
         var_element.set("Name", varname)
-        for key, value in dict:
-            property_element = ET.SubElement(var_elem, "Property")
+        for key, value in dict.items():
+            property_element = ET.SubElement(var_element, "Property")
             
             name_element = ET.SubElement(property_element, "Name")
             name_element.text = key
@@ -30,6 +32,24 @@ def json_to_xml_properties(json_obj):
             value_element.text = str(value)
     
     return ET.tostring(properties, encoding='unicode')
+
+def escape_xml_attribute(value: str) -> str:
+    """
+    Escape special characters in a string to make it safe for XML attributes.
+    
+    Args:
+        value (str): The string to be escaped.
+    
+    Returns:
+        str: The escaped string suitable for XML attributes.
+    """
+    # Escape special characters
+    escaped_value = saxutils.escape(value, {'"': '&quot;', "'": '&apos;'})
+
+    # Replace newlines with a placeholder if needed
+    escaped_value = escaped_value.replace('\n', '&#10;')
+    
+    return escaped_value
 
 def json_to_xml(data):
 
@@ -55,10 +75,14 @@ def json_to_xml(data):
     variables_template = load_template("Variables")
     variables_xml_str = variables_template.substitute(variables=variables)
 
+    #description
+    description_str  = yaml.dump(data['description'], default_flow_style=False)
+    description_xml_str = escape_xml_attribute(description_str)
+
     # Load the root template from file
     root_template = load_template("Object")
     root_xml_str = root_template.substitute(name=data['name'],
-                                            description=data['description'],
+                                            description = description_xml_str,
                                             guid=data['guid'],
                                             rules_part=rules_xml_str,
                                             source_part=source_xml_str,
@@ -74,3 +98,4 @@ def json_to_xml(data):
     final_xml_str = ET.tostring(root_xml.getroot(), encoding='unicode')
 
     return final_xml_str
+

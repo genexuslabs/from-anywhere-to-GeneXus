@@ -1,6 +1,6 @@
 import re
 import uuid
-def parse_procedure(gx_string):
+def parse_procedure(gx_string, name):
     # Regular expression to match the procedure name and content
     match = re.search(r'Procedure\s+(\w+)\s*{(.*)}', gx_string, re.DOTALL)
     dict = {} 
@@ -11,6 +11,8 @@ def parse_procedure(gx_string):
         sections = parse_sections(content)
         sections["Variables"] = parse_variables((sections["Variables"]))
         dict["Parts"] = sections 
+        if name:
+            dict['name'] = sanitize_name(name)
     return dict
 
 def parse_sections(input_string):
@@ -82,3 +84,12 @@ def custom_uuid(name):
     
     return custom_uuid_str
 
+def sanitize_name(name):
+    # Replace invalid characters with an underscore
+    sanitized = re.sub(r'[^a-zA-Z0-9_]', '_', name)
+    
+    # Ensure the name starts with a letter
+    if sanitized and not sanitized[0].isalpha():
+        sanitized = 'a' + sanitized
+
+    return sanitized

@@ -2,17 +2,15 @@ import requests
 import json
 import os
 from dotenv import load_dotenv
-import click
-import gxeai.clean_proc
+import yaml
 
 # Load variables from the .env file
-def  call_proc_assistant(name, spec):
+def  call_spec_assistant(file_name, program):
     load_dotenv()
 
     BASE_URL = os.getenv('BASE_URL')
     SAIA_PROJECT_APITOKEN = os.getenv('SAIA_PROJECT_APITOKEN')
-    ASSISTANT_NAME = os.getenv('ASSISTANT_NAME')
-    REVISION = os.getenv('REVISION')
+    ASSISTANT_NAME = os.getenv('SPEC_ASSISTANT_NAME')
 
     # Define the headers
     headers = {
@@ -24,12 +22,11 @@ def  call_proc_assistant(name, spec):
 
     # Define the payload
     payload = {
-        "revision": REVISION,
         "model": f"saia:assistant:{ASSISTANT_NAME}",
         "messages": [
             {
                 "role": "user",
-                "content": spec
+                "content": program
             }
         ],
         "stream": "false"
@@ -40,23 +37,26 @@ def  call_proc_assistant(name, spec):
 
     # Save the content to response.txt
     json_data = json.loads(response.text)
-    answer = json_data['choices'][0]['message']['content']
+    mk_answer = json_data['choices'][0]['message']['content']
+    answer = remove_first_and_last_line(mk_answer)
     print(answer)
-    content = gxeai.clean_proc.parse_procedure(answer )
-    content['description'] = spec
-    if name:
-        content['name'] = name
-    return content
+    try:
+        content = yaml.safe_load(answer)
+        content['file_name'] = file_name
+        return content
+    except yaml.YAMLError as e:
+        print(f"Error loading YAML: {e}")
+        return None 
 
-
-@click.command()
-@click.option('--spec', default='use Abs function correctly by receiving and returing a number', help='spec for your proc')
-def test_main(spec):
-    content = call_proc_assistant(spec)
-    with open("response.txt", "w") as file:
-        multiline =json.dumps(content, indent=4)
-        file.write(multiline)
-        print("Response saved to response.txt")
-
-if __name__ == "__main__":
-    test_main()
+def remove_first_and_last_line(text):
+    # Split the text into lines
+    lines = text.splitlines()
+    
+    # Check if there are at least two lines to remove
+    if len(lines) <= 2:
+        return ""  # Return an empty string if there are two or fewer lines
+    
+    # Join the lines, excluding the first and last
+    new_text = '\n'.join(lines[1:-1])
+    
+    return new_text
