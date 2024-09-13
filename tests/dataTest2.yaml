@@ -1,0 +1,10 @@
+- name: TestBubbleSort
+  spec: | 
+         Create a TestBubbleSort procedure that tests the BubbleSort. The bubble sort procedure receives a collection of 'Numeric(10)' and returns the same collection sorted. Think of at least 5 cases and test them.
+
+- name: DoubleANumber
+  spec: | 
+         Create a procedure that receives a number and doubles it
+- name: MaximoComunDivisor
+  spec: | 
+         Create a procedure that receives a number and doubles it

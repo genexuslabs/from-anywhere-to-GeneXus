@@ -1,0 +1,4 @@
+- name: Double number
+  spec: | 
+         create a procedure that receives a number and doubles it
+

@@ -1,0 +1,6 @@
+- name: PFAddYr
+  spec: | 
+         create a prcedure to test de addyr function it should try the following cases. Add Years Esperado: Metodo AddYears => Test OK Caso 1 - Date + 1 => ymdtod(79,03,24).AddYears(1) Esperado: ymdtod(80,03,24) Caso 2 - Date - 5 => ymdtod(03,03,24).AddYears(-5) Esperado: ymdtod(98,03,24) Caso 3 - Date99 + 1 => ymdtod(99,10,21).AddYears(1) Esperado: ymdtod(2000,10,21) Caso 4 - Date de 8 Nulo + 1 => nullvalue(<date>).AddYears(1) Esperado: &d8=GetNullDate() Esperado al día 26.4.22: [01/01/02] Caso 5 - DateTime + 3 => ymdhmstot(79,03,24,13,25,10).AddYears(3) Esperado: ymdhmstot(82,03,24,13,25,10) Caso 6 - DateTime - 1 => ymdhmstot(03,03,24,13,25,10).AddYears(-1) Esperado: ymdhmstot(02,03,24,13,25,10) Caso 7 - DateTime99 + 2 => ymdhmstot(99,10,21,14,23,50).AddYears(2) Esperado: ymdhmstot(01,10,21,14,23,50) 
+- name: BubbleSort
+  spec: | 
+         create a bubble sort example

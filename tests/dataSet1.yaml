@@ -1,0 +1,270 @@
+- name: procAbs
+  spec: create a procedure, named procAbs, that uses Abs function correctly. Input var should be named "edad" output var should be named result.
+- name: procAddMth
+  spec: create a procedure, named procAddMth, that uses AddMth function correctly
+- name: procAddYr
+  spec: create a procedure, named procAddYr, that uses AddYr function correctly
+- name: procAge
+  spec: create a procedure, named procAge, that uses Age function correctly
+- name: procAsc
+  spec: create a procedure, named procAsc, that uses Asc function correctly
+- name: procAverage
+  spec: create a procedure, named procAverage, that uses Average function correctly
+- name: procBrowserId
+  spec: create a procedure, named procBrowserId, that uses BrowserId function correctly
+- name: procBrowserVersion
+  spec: create a procedure, named procBrowserVersion, that uses BrowserVersion function correctly
+- name: procByteCount
+  spec: create a procedure, named procByteCount, that uses ByteCount function correctly
+- name: procCDoW
+  spec: create a procedure, named procCDoW, that uses CDoW function correctly
+- name: procChr
+  spec: create a procedure, named procChr, that uses Chr function correctly
+- name: procCMonth
+  spec: create a procedure, named procCMonth, that uses CMonth function correctly
+- name: procCols
+  spec: create a procedure, named procCols, that uses Cols function correctly
+- name: procCompare
+  spec: create a procedure, named procCompare, that uses Compare function correctly
+- name: procConcat
+  spec: create a procedure, named procConcat, that uses Concat function correctly
+- name: procCount
+  spec: create a procedure, named procCount, that uses Count function correctly
+- name: procCreate
+  spec: create a procedure, named procCreate, that uses Create function correctly
+- name: procCreateFromURL
+  spec: create a procedure, named procCreateFromURL, that uses CreateFromURL function correctly
+- name: procCtoD
+  spec: create a procedure, named procCtoD, that uses CtoD function correctly
+- name: procCtoT
+  spec: create a procedure, named procCtoT, that uses CtoT function correctly
+- name: procDay
+  spec: create a procedure, named procDay, that uses Day function correctly
+- name: procDecrypt64
+  spec: create a procedure, named procDecrypt64, that uses Decrypt64 function correctly
+- name: procDFRClose
+  spec: create a procedure, named procDFRClose, that uses DFRClose function correctly
+- name: procDFRGDate
+  spec: create a procedure, named procDFRGDate, that uses DFRGDate function correctly
+- name: procDFRGNum
+  spec: create a procedure, named procDFRGNum, that uses DFRGNum function correctly
+- name: procDFRGTxt
+  spec: create a procedure, named procDFRGTxt, that uses DFRGTxt function correctly
+- name: procDFRNext
+  spec: create a procedure, named procDFRNext, that uses DFRNext function correctly
+- name: procDFROpen
+  spec: create a procedure, named procDFROpen, that uses DFROpen function correctly
+- name: procDFWClose
+  spec: create a procedure, named procDFWClose, that uses DFWClose function correctly
+- name: procDFWNext
+  spec: create a procedure, named procDFWNext, that uses DFWNext function correctly
+- name: procDFWOpen
+  spec: create a procedure, named procDFWOpen, that uses DFWOpen function correctly
+- name: procDFWPDate
+  spec: create a procedure, named procDFWPDate, that uses DFWPDate function correctly
+- name: procDFWPNum
+  spec: create a procedure, named procDFWPNum, that uses DFWPNum function correctly
+- name: procDFWPTxt
+  spec: create a procedure, named procDFWPTxt, that uses DFWPTxt function correctly
+- name: procDoW
+  spec: create a procedure, named procDoW, that uses DoW function correctly
+- name: procDtoC
+  spec: create a procedure, named procDtoC, that uses DtoC function correctly
+- name: procEncrypt64
+  spec: create a procedure, named procEncrypt64, that uses Encrypt64 function correctly
+- name: procEoM
+  spec: create a procedure, named procEoM, that uses EoM function correctly
+- name: procExists
+  spec: create a procedure, named procExists, that uses Exists function correctly
+- name: procFileExist
+  spec: create a procedure, named procFileExist, that uses FileExist function correctly
+- name: procFind
+  spec: create a procedure, named procFind, that uses Find function correctly
+- name: procFormat
+  spec: create a procedure, named procFormat, that uses Format function correctly
+- name: procFromBase64
+  spec: create a procedure, named procFromBase64, that uses FromBase64 function correctly
+- name: procGetCookie
+  spec: create a procedure, named procGetCookie, that uses GetCookie function correctly
+- name: procGetDataStore
+  spec: create a procedure, named procGetDataStore, that uses GetDataStore function correctly
+- name: procGetEncryptionKey
+  spec: create a procedure, named procGetEncryptionKey, that uses GetEncryptionKey function correctly
+- name: procGetLanguage
+  spec: create a procedure, named procGetLanguage, that uses GetLanguage function correctly
+- name: procGetLocation
+  spec: create a procedure, named procGetLocation, that uses GetLocation function correctly
+- name: procGetMessageText
+  spec: create a procedure, named procGetMessageText, that uses GetMessageText function correctly
+- name: procGetSOAPErr
+  spec: create a procedure, named procGetSOAPErr, that uses GetSOAPErr function correctly
+- name: procGetSOAPErrMsg
+  spec: create a procedure, named procGetSOAPErrMsg, that uses GetSOAPErrMsg function correctly
+- name: procGetTheme
+  spec: create a procedure, named procGetTheme, that uses GetTheme function correctly
+- name: procGXGetMLi
+  spec: create a procedure, named procGXGetMLi, that uses GXGetMLi function correctly
+- name: procGXMLines
+  spec: create a procedure, named procGXMLines, that uses GXMLines function correctly
+- name: procHour
+  spec: create a procedure, named procHour, that uses Hour correctly
+- name: procHTMLClean
+  spec: create a procedure, named procHTMLClean, that uses HTMLClean function correctly
+- name: procUrlDecode
+  spec: create a procedure, named procUrlDecode, that uses UrlDecode function correctly
+- name: procUrlEncode
+  spec: create a procedure, named procUrlEncode, that uses UrlEncode function correctly
+- name: prociif
+  spec: create a procedure, named prociif, that uses iif function correctly
+- name: procInt
+  spec: create a procedure, named procInt, that uses Int function correctly
+- name: procIsNull
+  spec: create a procedure, named procIsNull, that uses IsNull function correctly
+- name: procLen
+  spec: create a procedure, named procLen, that uses Len function correctly
+- name: procLink
+  spec: create a procedure, named procLink, that uses Link Function correctly
+- name: procLower
+  spec: create a procedure, named procLower, that uses Lower function correctly
+- name: procLTrim
+  spec: create a procedure, named procLTrim, that uses LTrim function correctly
+- name: procMax
+  spec: create a procedure, named procMax, that uses Max function correctly
+- name: procMin
+  spec: create a procedure, named procMin, that uses Min function correctly
+- name: procMinute
+  spec: create a procedure, named procMinute, that uses Minute function correctly
+- name: procMod
+  spec: create a procedure, named procMod, that uses Mod function correctly
+- name: procMonth
+  spec: create a procedure, named procMonth, that uses Month function correctly
+- name: procNewLine
+  spec: create a procedure, named procNewLine, that uses NewLine function correctly
+- name: procNow
+  spec: create a procedure, named procNow, that uses Now function correctly
+- name: procNull
+  spec: create a procedure, named procNull, that uses Null function correctly
+- name: procNullvalue
+  spec: create a procedure, named procNullvalue, that uses Nullvalue function correctly
+- name: procOpenDocument
+  spec: create a procedure, named procOpenDocument, that uses OpenDocument function correctly
+- name: procPadL
+  spec: create a procedure, named procPadL, that uses PadL function correctly
+- name: procPadR
+  spec: create a procedure, named procPadR, that uses PadR function correctly
+- name: procPathToURL
+  spec: create a procedure, named procPathToURL, that uses PathToURL function correctly
+- name: procPrintDocument
+  spec: create a procedure, named procPrintDocument, that uses PrintDocument function correctly
+- name: procRandom
+  spec: create a procedure, named procRandom, that uses Random function correctly
+- name: procReadRegKey
+  spec: create a procedure, named procReadRegKey, that uses ReadRegKey Function correctly
+- name: procRemoteAddr
+  spec: create a procedure, named procRemoteAddr, that uses RemoteAddr function correctly
+- name: procReturnOnClick
+  spec: create a procedure, named procReturnOnClick, that uses ReturnOnClick function correctly
+- name: procRGB
+  spec: create a procedure, named procRGB, that uses RGB function correctly
+- name: procRound
+  spec: create a procedure, named procRound, that uses Round function correctly
+- name: procRoundToEven
+  spec: create a procedure, named procRoundToEven, that uses RoundToEven function correctly
+- name: procRows
+  spec: create a procedure, named procRows, that uses Rows function correctly
+- name: procRSeed
+  spec: create a procedure, named procRSeed, that uses RSeed function correctly
+- name: procRTrim
+  spec: create a procedure, named procRTrim, that uses RTrim function correctly
+- name: procSecond
+  spec: create a procedure, named procSecond, that uses Second function correctly
+- name: procServerDate
+  spec: create a procedure, named procServerDate, that uses ServerDate function correctly
+- name: procServerNow
+  spec: create a procedure, named procServerNow, that uses ServerNow function correctly
+- name: procServerTime
+  spec: create a procedure, named procServerTime, that uses ServerTime function correctly
+- name: procSetCookie
+  spec: create a procedure, named procSetCookie, that uses SetCookie function correctly
+- name: procSetLanguage
+  spec: create a procedure, named procSetLanguage, that uses SetLanguage function correctly
+- name: procSetTheme
+  spec: create a procedure, named procSetTheme, that uses SetTheme function correctly
+- name: procSetUserId
+  spec: create a procedure, named procSetUserId, that uses SetUserId function correctly
+- name: procSetWrkSt
+  spec: create a procedure, named procSetWrkSt, that uses SetWrkSt function correctly
+- name: procShell
+  spec: create a procedure, named procShell, that uses Shell function correctly
+- name: procSleep
+  spec: create a procedure, named procSleep, that uses Sleep function correctly
+- name: procSpace
+  spec: create a procedure, named procSpace, that uses Space function correctly
+- name: procStr
+  spec: create a procedure, named procStr, that uses Str function correctly
+- name: procStrReplace
+  spec: create a procedure, named procStrReplace, that uses StrReplace function correctly
+- name: procStrSearch
+  spec: create a procedure, named procStrSearch, that uses StrSearch function correctly
+- name: procStrSearchRev
+  spec: create a procedure, named procStrSearchRev, that uses StrSearchRev function correctly
+- name: procSubstr
+  spec: create a procedure, named procSubstr, that uses Substr function correctly
+- name: procSum
+  spec: create a procedure, named procSum, that uses Sum function correctly
+- name: procSysdate
+  spec: create a procedure, named procSysdate, that uses Sysdate function correctly
+- name: procSystime
+  spec: create a procedure, named procSystime, that uses Systime function correctly
+- name: procTAdd
+  spec: create a procedure, named procTAdd, that uses TAdd function correctly
+- name: procTDiff
+  spec: create a procedure, named procTDiff, that uses TDiff function correctly
+- name: procTime
+  spec: create a procedure, named procTime, that uses Time function correctly
+- name: procToBase64
+  spec: create a procedure, named procToBase64, that uses ToBase64 function correctly
+- name: procToday
+  spec: create a procedure, named procToday, that uses Today function correctly
+- name: procToFormattedString
+  spec: create a procedure, named procToFormattedString, that uses ToFormattedString function correctly
+- name: procTrim
+  spec: create a procedure, named procTrim, that uses Trim function correctly
+- name: procTrunc
+  spec: create a procedure, named procTrunc, that uses Trunc function correctly
+- name: procTtoC
+  spec: create a procedure, named procTtoC, that uses TtoC function correctly
+- name: procUDP
+  spec: create a procedure, named procUDP, that uses UDP function correctly
+- name: procUpper
+  spec: create a procedure, named procUpper, that uses Upper function correctly
+- name: procUserCls
+  spec: create a procedure, named procUserCls, that uses UserCls function correctly
+- name: procUserId
+  spec: create a procedure, named procUserId, that uses UserId function correctly
+- name: procVal
+  spec: create a procedure, named procVal, that uses Val function correctly
+- name: procWriteRegKey
+  spec: create a procedure, named procWriteRegKey, that uses WriteRegKey function correctly
+- name: procWrkSt
+  spec: create a procedure, named procWrkSt, that uses WrkSt function correctly
+- name: procXSLTApply
+  spec: create a procedure, named procXSLTApply, that uses XSLTApply function correctly
+- name: procYear
+  spec: create a procedure, named procYear, that uses Year function correctly
+- name: procYMDHMStoT
+  spec: create a procedure, named procYMDHMStoT, that uses YMDHMStoT function correctly
+- name: procYMDtoD
+  spec: create a procedure, named procYMDtoD, that uses YMDtoD function correctly
+- name: procReadAllText
+  spec: create a procedure, named procReadAllText, that uses ReadAllText correctly
+- name: procReadAllLines
+  spec: create a procedure, named procReadAllLines, that uses ReadAllLines correctly
+- name: procWriteAllText
+  spec: create a procedure, named procWriteAllText, that uses WriteAllText correctly
+- name: procWriteAllLines
+  spec: create a procedure, named procWriteAllLines, that uses WriteAllLines correctly
+- name: procAppendAllText
+  spec: create a procedure, named procAppendAllText, that uses AppendAllText correctly
+- name: procAppendAllLines
+  spec: create a procedure, named procAppendAllLines, that uses AppendAllLines correctly
