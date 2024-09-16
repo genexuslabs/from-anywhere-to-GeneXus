@@ -6,7 +6,7 @@
     <Build>0</Build>
   </KMW>
   <Source kb="296543ba-6c3e-48ce-a606-e670ddc9ebcb" username="root" UNCPath="/app/kbs/296543ba-6c3e-48ce-a606-e670ddc9ebcb/kb">
-    <Version guid="5e70348a-0d5d-4fd9-91df-b4f5325b5379" name="MeetBancoPatagonia" />
+    <Version guid="00000000-0d5d-4fd9-91df-b4f5325b5379" name="SampleKB" />
   </Source>
   <Objects>
       ${objects}
