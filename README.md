@@ -57,9 +57,9 @@ After setting up the environment, you can run `script1.py` by providing a file p
 
 ```bash
 
-python spec_to_xpz.py --spec_path ./outputs/spec1.yml --xml_path ./outputs/xpz1.xml
+python spec_to_xpz.py --spec_path ./outputs/spec1.yml --output ./outputs/test1
 ```
-You can import the xpz1.xml file directly into GeneXus.
+You can import outputs/import_file.xml directly into GeneXus.
 
 or
 

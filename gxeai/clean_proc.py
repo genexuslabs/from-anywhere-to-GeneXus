@@ -62,8 +62,11 @@ def parse_variables(input_string):
 
 def clean_variable_datatype(dict):
     # Regular expression to capture the type and number
-    input_string = dict['DataType']
-    dict.pop('DataType')
+    if 'DataType' in dict:
+        input_string = dict['DataType']
+        dict.pop('DataType')
+    else:
+        input_string = "Numeric(11,1)"
     # Split the string at the parentheses
     if '(' in input_string:
         data_type, number = input_string.split('(')
