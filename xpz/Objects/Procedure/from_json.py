@@ -16,11 +16,11 @@ def load_template(part_name):
     template_path = os.path.join(script_dir, f"{part_name}.xml")
     return Template(load_file(template_path))
 
-def json_to_xml_properties(json_obj):
-    properties = ET.Element("Properties")
+def json_to_xml_string_variables(json_obj):
+    properties = ET.Element("Variables")
     
     for varname, dict in json_obj.items():
-        var_element = ET.SubElement(properties, "Variables")
+        var_element = ET.SubElement(properties, "Variable")
         var_element.set("Name", varname)
         for key, value in dict.items():
             property_element = ET.SubElement(var_element, "Property")
@@ -30,8 +30,8 @@ def json_to_xml_properties(json_obj):
             
             value_element = ET.SubElement(property_element, "Value")
             value_element.text = str(value)
-    
-    return ET.tostring(properties, encoding='unicode')
+
+    return "".join(ET.tostring(e, encoding="unicode") for e in properties)
 
 def escape_xml_attribute(value: str) -> str:
     """
@@ -71,7 +71,7 @@ def json_to_xml(data):
     # Load the source template from file
     variables = "<Properties></Properties>"
     if "Parts" in data and "Variables" in data["Parts"]:
-        variables = json_to_xml_properties(data['Parts']['Variables'])
+        variables = json_to_xml_string_variables(data['Parts']['Variables'])
     variables_template = load_template("Variables")
     variables_xml_str = variables_template.substitute(variables=variables)
 

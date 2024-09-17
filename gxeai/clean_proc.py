@@ -54,7 +54,7 @@ def parse_variables(input_string):
             attr_list = {attr_name: attr_value for attr_name, attr_value in attr_matches}
         
         # Append the name and its attribute list to the result
-        attr_list['name'] = name
+        attr_list['Name'] = name
         clean_variable_datatype(attr_list)        
         items[name] = attr_list
     
@@ -74,7 +74,7 @@ def clean_variable_datatype(dict):
         number = number.rstrip(')')
         dict['ATTCUSTOMTYPE'] = 'bas:'+data_type
         dict['Length'] = number
-        dict['AttMaxLangth'] = number
+        dict['AttMaxLen'] = number
     else:
         dict['ATTCUSTOMTYPE'] = 'bas:'+input_string
     
