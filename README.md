@@ -36,6 +36,7 @@ Once the virtual environment is activated, install the required packages using `
 
 ```bash
 pip install -r requirements.txt
+```
 
 ### 4. Create a .env file
 ```
